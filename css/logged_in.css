@@ -1,0 +1,175 @@
+@import url('https://fontlibrary.org//face/courier-prime-code');
+@import url('https://fontlibrary.org//face/courier-prim');
+@import url('https://fontlibrary.org//face/ttnorms-black');
+/*nav bar and start of background code*/
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+
+label.logo{
+    color: white;
+    font-size: 35px;
+    font-family: 'CourierPrimeCodeRegular';
+    line-height: 80px;
+    padding: 0px 100px;
+    font-size: bold;
+    
+}
+li {
+    text-transform: uppercase;
+}
+nav {
+    background: #161515;
+    height: 80px;
+    width: 100%;
+    position: fi;
+
+}
+nav ul{
+    float: right;
+    margin-right: 30px;
+
+}
+
+nav ul li {
+    font-family: 'CourierPrimeCodeRegular';
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.pic1{
+    
+    position: absolute;
+    border-radius: 50%;
+    margin-top: 0px;
+    margin-left: 0px;
+    
+}
+nav ul li a{
+    
+    color: #fffefe;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+
+}
+
+a.active,a:hover{
+    background: #cc4506;
+    animation: btn 0.5s;
+}
+@keyframes btn {
+    0%{background: rgb(22, 21, 21);}
+    100%{background: #cc4506;}
+}
+/*end of nav bar*/
+section{
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    background: linear-gradient(45deg,#c25e1b,#e43b11,#ff7d04);
+    overflow: hidden;
+  }
+  section .air{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url('https://1.bp.blogspot.com/-xQUc-TovqDk/XdxogmMqIRI/AAAAAAAACvI/AizpnE509UMGBcTiLJ58BC6iViPYGYQfQCLcBGAsYHQ/s1600/wave.png');
+    background-size: 1000px 100px
+  }
+  section .air.air1{
+    animation: wave 30s linear infinite;
+    z-index: 1000;
+    opacity: 1;
+    animation-delay: 0s;
+    bottom: 0;
+  }
+  section .air.air2{
+    animation: wave2 15s linear infinite;
+    z-index: 999;
+    opacity: 0.5;
+    animation-delay: -5s;
+    bottom: 10px;
+  }
+  section .air.air3{
+    animation: wave 30s linear infinite;
+    z-index: 998;
+    opacity: 0.2;
+    animation-delay: -2s;
+    bottom: 15px;
+  }
+  section .air.air4{
+    animation: wave2 5s linear infinite;
+    z-index: 997;
+    opacity: 0.7;
+    animation-delay: -5s;
+    bottom: 20px;
+  }
+  @keyframes wave{
+    0%{
+      background-position-x: 0px; 
+    }
+    100%{
+      background-position-x: 1000px; 
+    }
+  }
+  @keyframes wave2{
+    0%{
+      background-position-x: 0px; 
+    }
+    100%{
+      background-position-x: -1000px; 
+    }
+  }
+
+/*start of the main code */
+button {
+    background: #fff;
+    border: none;
+    padding: 10px 20px;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 600;
+    width: 150px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transform: skew(-21deg);
+    margin-left: 55rem;
+  }
+  
+  span {
+    display: inline-block;
+    transform: skew(21deg);
+  }
+  
+  button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 100%;
+    left: 0;
+    background: rgb(20, 20, 20);
+    opacity: 0;
+    z-index: -1;
+    transition: all 0.5s;
+  }
+  
+  button:hover {
+    color: #fff;
+  }
+  
+  button:hover::before {
+    left: 0;
+    right: 0;
+    opacity: 1;
+  }
